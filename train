@@ -13,10 +13,6 @@ import torch.nn.functional as F
 from tqdm import tqdm
 from dataset_CL import DataSet
 from Loss_function import graph_loss
-from loss_fuc.RelationalKD import rkd_loss
-from loss_fuc.ReviewKD import hcl_loss
-from loss_fuc.DKD_loss import dkd_loss
-from loss_fuc.SP import sp_loss
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -73,7 +69,6 @@ for k, v in sorted(vars(args).items()):
     print(k, ': ', v)
 
 
-# 数据集选择
 if args.mode == "PISC_Fine":
     data_dir = r"/xxx/image"
     num_class = 6
