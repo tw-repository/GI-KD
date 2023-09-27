@@ -362,7 +362,7 @@ def generate_graph(rel_num, scene=args.scene):
 
 def init_network(net, num_class):
     # Initialize the network.
-    if net == 'GGNN_attn':
+    if net == 'network':
         from network import fusion
         model = fusion(num_class)
         for m in model.pp.parameters():
