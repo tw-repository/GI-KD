@@ -33,7 +33,6 @@ class fusion(nn.Module):
 
         personPair, person_1, person_2, box, scene = self.pp(pair, person_a, person_b, bbox, full_im)
 
-        # 扩展维度，从batch-size维扩展到关系总数维
         scene_new = scene[0].repeat(img_rel_num[0], 1)
         for i, num in enumerate(img_rel_num[1:]):
             scene_new = torch.cat([scene_new, scene[i + 1].repeat(num, 1)], dim=0)
