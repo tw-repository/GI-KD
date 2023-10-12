@@ -3,7 +3,7 @@ import torch.nn as nn
 import numpy as np
 from einops import repeat, rearrange
 from timm import create_model
-from utils.transformer import Transformer
+from transformer import Transformer
 
 ViT_imagenet = create_model('vit_large_patch16_224', pretrained=False, num_classes=1024)
 ViT_imagenet_1 = create_model('vit_large_patch16_224', pretrained=False, num_classes=1024)
