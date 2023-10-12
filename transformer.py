@@ -19,7 +19,6 @@ class Residual(nn.Module):
         super().__init__()
         self.fn = fn
 
-    # **kwargs传入dict类型的一个或多个参数
     def forward(self, x, **kwargs):
         return self.fn(x, **kwargs) + x
 
@@ -92,10 +91,3 @@ class Transformer(nn.Module):
             x = attn(x, mask=mask)
             x = ff(x)
         return x
-
-# dim = 2048
-# heads = 8
-# dim_head = 64
-# dropout = 0.
-# depth =12
-# mlp_dim = 1024
