@@ -47,11 +47,9 @@ class fusion(nn.Module):
 
         fea_attn = torch.cat((cls_tokens, x1, x2, x3, x4, x5), dim=-2)
 
-        # multi-head attn
         fea_mhsa = self.multiattn_intra(fea_attn)
         fea_mhsa = self.ReLU(fea_mhsa)
-
-        # back to (batch,2048)
+        
         cls_attn = fea_mhsa[:, 0, :]
 
         rel_num_1 = img_rel_num[0]
