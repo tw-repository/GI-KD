@@ -1,5 +1,5 @@
-# CSGKD
-Cross-spatial Graph Knowledge Distillation based Class Incremental Learning for Social Relationship Recognition
+# GI-KD
+Class Incremental Learning for Social Relationship Recognition
 
 ## Environment
 
